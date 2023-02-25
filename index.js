@@ -1,17 +1,17 @@
 const fizz = "Fizz";
 const buzz = "Buzz";
-//const a = document.createElement("li");
-const arr1000FizzBuzz = new Array(1000)
-  .fill(0)
-  .map((_, i) =>
-    !(i % 3) && !(i % 5) ? fizz + buzz : !(i % 5) ? buzz : !(i % 3) ? fizz : i
-  )
-  .forEach((i) => {
-    const a = document.createElement("li");
-    a.innerText = i.toString();
-    document.getElementById("listNum").appendChild(a);
-    console.log(i);
-  });
+const arr1000FizzBuzz = new Array(1000).fill(0).map((_, i) => {
+  const value =
+    !(i % 3) && !(i % 5) ? fizz + buzz : !(i % 5) ? buzz : !(i % 3) ? fizz : i;
+  this.setInDOM(value);
+  return value;
+});
+
+function setInDOM(value) {
+  const a = document.createElement("li");
+  a.innerText = value.toString();
+  document.getElementById("listNum").appendChild(a);
+}
 
 // arr1000.forEach((item) => {
 //   !(item % 3) && !(item % 5)

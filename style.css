@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+}
