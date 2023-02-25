@@ -4,6 +4,8 @@ const arr1000FizzBuzz = new Array(1000).fill(0).map((_, i) => {
   const value =
     !(i % 3) && !(i % 5) ? fizz + buzz : !(i % 5) ? buzz : !(i % 3) ? fizz : i;
   this.setInDOM(value);
+  console.log(value);
+
   return value;
 });
 
